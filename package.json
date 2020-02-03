@@ -1,0 +1,8 @@
+{
+  "name": "Express-curso",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/hjunor/Express-curso.git",
+  "author": "Heberth Junor Teixeira Aguiar <hjunor@gmail.com>",
+  "license": "MIT"
+}
