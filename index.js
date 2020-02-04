@@ -6,23 +6,18 @@ app.get('/',(req, res) =>{
     res.send('olá mundo ')
 })
 
-app.get('/soma/:numA & numB', (req, res) => {
-function soma( iA, iB){
-    return parseInt(iA) +parseInt( iB);
-}
-let a = parseInt(req.params.numA)
-let b = parseInt(req.params.numB)
-let c = soma(a,b)
 
-  res.send(c)
+
+app.get('/canal', (req, res) => {
+  var canal = req.query['Canal'];
+  canal ? res.send(canal) : res.send('Nenhum canal fornecido');
+ 
 })
 
-app.get('/canal/youtube', (req, res) => {
-  res.send('GET request to the homepage')
-})
-
-app.get('/ola/:nome', (req, res) => {
-  res.send(req.params.nome)
+app.get('/ola/:nome/:empressa', (req, res) => {
+  var nome = req.params.nome;
+  var empresa = req.params.empresa
+  res.send('<h1> OI '+ nome +'do'+ empresa +'</h1>')
 })
 
 app.listen(3000,(erro) => {
@@ -32,3 +27,4 @@ app.listen(3000,(erro) => {
         console.log('Servidor iniciado com sucesso!')
     }
 })
+ 
